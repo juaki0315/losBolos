@@ -22,5 +22,10 @@ class TestBolos(unittest.TestCase):
         resultado = Partida.sumar_puntuaciones(partida)
         self.assertEqual(esperado, resultado)
 
+    def test_lanzar_bolas(self):
+        tirada = Partida.lanzar_bolas()
+        self.assertLessEqual(sum(tirada), 10)
+        print(tirada)
+
 if __name__ == '__main__':
     unittest.main()
