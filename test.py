@@ -25,7 +25,10 @@ class TestBolos(unittest.TestCase):
     def test_lanzar_bolas(self):
         tirada = Partida.lanzar_bolas()
         self.assertLessEqual(sum(tirada), 10)
-        print(tirada)
+
+    def test_lanzar_bolas2(self):
+        tirada = Partida.lanzar_bolas()
+        self.assertGreaterEqual(sum(tirada), 0)
 
 if __name__ == '__main__':
     unittest.main()
