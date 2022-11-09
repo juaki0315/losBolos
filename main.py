@@ -2,10 +2,10 @@ import random
 
 class Partida:
 
-    partida = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
+    tabla_puntos = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
 
     def sumar_puntuaciones(self):
-        resultado = sum(list(map(sum, list(self.partida)))) 
+        resultado = sum(list(map(sum, list(self.tabla_puntos)))) 
         return resultado
 
     def lanzar_bolas(self):
@@ -15,7 +15,7 @@ class Partida:
         return tirada
 
     def asignar_puntuacion(self, posicion, puntos):
-        self.partida[posicion] = puntos
-        return self.partida
+        self.tabla_puntos[posicion] = puntos
+        return self.tabla_puntos
 
 
