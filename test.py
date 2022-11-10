@@ -36,19 +36,19 @@ class TestBolos(unittest.TestCase):
         tirada = prueba.lanzar_bolas()
         self.assertGreaterEqual(sum(tirada), 0)
 
-    def test_asignar_puntuacion2(self):
+    def test_asignar_puntuacion(self):
         prueba = Partida()
         tirada = prueba.lanzar_bolas()
         escenario = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
         escenario[0] = tirada
         self.assertEqual(escenario, prueba.asignar_puntuacion(0, tirada))
 
-    def test_asignar_puntuacion(self):
+    def test_asignar_puntuacion2(self):
         prueba = Partida()
         tirada = prueba.lanzar_bolas()
         escenario = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
         escenario[2] = tirada
-        self.assertEqual(escenario, prueba.asignar_puntuacion(0, tirada))    
+        self.assertEqual(escenario, prueba.asignar_puntuacion(2, tirada))    
 
 
 if __name__ == '__main__':
