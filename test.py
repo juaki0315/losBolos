@@ -4,7 +4,7 @@ from main import Partida
 class TestBolos(unittest.TestCase):
     def test_dummy(self):
         self.assertEqual('foo'.upper(), 'FOO')
-        
+
 
     def test_existe_partida(self):
         esperado = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
@@ -43,12 +43,12 @@ class TestBolos(unittest.TestCase):
         escenario[0] = tirada
         self.assertEqual(escenario, prueba.asignar_puntuacion(0, tirada))
 
-    '''def test_asignar_puntuacion(self):
+    def test_asignar_puntuacion(self):
         prueba = Partida()
         tirada = prueba.lanzar_bolas()
         escenario = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
         escenario[2] = tirada
-        self.assertEqual(escenario, prueba.asignar_puntuacion(0, tirada))'''    
+        self.assertEqual(escenario, prueba.asignar_puntuacion(0, tirada))    
 
 
 if __name__ == '__main__':
