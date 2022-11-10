@@ -2,7 +2,8 @@ import random
 
 class Partida:
 
-    tabla_puntos = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
+    def __init__(self):
+        self.tabla_puntos = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
 
     def sumar_puntuaciones(self):
         resultado = sum(list(map(sum, list(self.tabla_puntos)))) 

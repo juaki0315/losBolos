@@ -13,7 +13,6 @@ class TestBolos(unittest.TestCase):
         esperado = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
         prueba = Partida()
         resultado = prueba.tabla_puntos
-        prueba.tabla_puntos[0] = [0,0]
         self.assertEqual(esperado, resultado)
     
     def test_sumar_puntuacion(self):
