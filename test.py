@@ -4,10 +4,7 @@ from main import Partida
 class TestBolos(unittest.TestCase):
     def test_dummy(self):
         self.assertEqual('foo'.upper(), 'FOO')
-
-
-    # TODO falla el test sin la linea 15 porque asignar puntuacion me lo cambia en todos
-
+        
 
     def test_existe_partida(self):
         esperado = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
