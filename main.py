@@ -19,4 +19,11 @@ class Partida:
         self.tabla_puntos[posicion] = puntos
         return self.tabla_puntos
 
+    def check_strike(self, turno):
+        if turno[0] == 10:
+            return True
+        else:
+            return False
+
+
 

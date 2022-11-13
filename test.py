@@ -51,5 +51,11 @@ class TestBolos(unittest.TestCase):
         self.assertEqual(escenario, prueba.asignar_puntuacion(2, tirada))    
 
 
+    def test_check_strike(self):
+        prueba = Partida()
+        escenario = [[10,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
+        prueba.tabla_puntos = escenario
+        self.assertTrue(prueba.check_strike(prueba.tabla_puntos[0]))
+
 if __name__ == '__main__':
     unittest.main()
