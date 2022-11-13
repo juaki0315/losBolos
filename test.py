@@ -26,13 +26,6 @@ class TestBolos(unittest.TestCase):
         resultado = prueba.sumar_puntuaciones()
         self.assertEqual(esperado, resultado)
 
-    def test_sumar_puntuacion3(self):
-        prueba = Partida()
-        prueba.tabla_puntos = [[1,1],[1,0],[1,0],[10,0],[1,5],[1,0],[1,0],[1,0],[1,0],[1,0]]
-        esperado = 31  
-        resultado = prueba.sumar_puntuaciones()
-        self.assertEqual(esperado, resultado)
-
     def test_lanzar_bolas(self):
         prueba = Partida()
         tirada = prueba.lanzar_bolas()
