@@ -55,7 +55,10 @@ class TestBolos(unittest.TestCase):
         prueba = Partida()
         escenario = [[10,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
         prueba.tabla_puntos = escenario
-        self.assertTrue(prueba.check_strike(prueba.tabla_puntos[0]))
+        turno = prueba.tabla_puntos[0]
+        self.assertTrue(prueba.check_strike(turno))
+
+    
 
 if __name__ == '__main__':
     unittest.main()
