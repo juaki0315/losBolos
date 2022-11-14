@@ -11,7 +11,7 @@ class Partida:
         ha_habido_strike = False
         for elemento in self.tabla_puntos:
             posicion = 0
-            if self.check_strike(elemento) == True:
+            if self.check_strike(elemento):
                 resultado += 10
                 ha_habido_strike = True
                 posicion += 1 
