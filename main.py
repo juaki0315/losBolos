@@ -40,7 +40,10 @@ class Partida:
             return True
         else:
             return False
-        
 
-
+    def check_spare(self, turno):
+        if (sum(turno) == 10) & (turno[0] != 10):
+            return True
+        else:
+            return False
 

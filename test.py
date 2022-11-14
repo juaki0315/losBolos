@@ -65,7 +65,12 @@ class TestBolos(unittest.TestCase):
         turno = prueba.tabla_puntos[0]
         self.assertTrue(prueba.check_strike(turno))
 
-    
+    def test_check_spare(self):
+        prueba = Partida()
+        escenario = [[8,2],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
+        prueba.tabla_puntos = escenario
+        turno = prueba.tabla_puntos[0]
+        self.assertTrue(prueba.check_spare(turno))
 
 if __name__ == '__main__':
     unittest.main()
