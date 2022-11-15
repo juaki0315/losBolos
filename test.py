@@ -26,10 +26,17 @@ class TestBolos(unittest.TestCase):
         resultado = prueba.sumar_puntuaciones()
         self.assertEqual(esperado, resultado)
 
-    def test_sumar_puntuacion3(self):
+    def test_sumar_puntuacion_con_strike(self):
         prueba = Partida()
         prueba.tabla_puntos = [[1,1],[1,0],[1,0],[10],[1,5],[1,0],[1,0],[1,0],[1,0],[1,0]]
         esperado = 31  
+        resultado = prueba.sumar_puntuaciones()
+        self.assertEqual(esperado, resultado)
+
+    def test_sumar_puntuacio_con_spare(self):
+        prueba = Partida()
+        prueba.tabla_puntos = [[1,1],[1,0],[1,0],[8,2],[1,5],[1,0],[1,0],[1,0],[1,0],[1,0]]
+        esperado = 26  
         resultado = prueba.sumar_puntuaciones()
         self.assertEqual(esperado, resultado)
 

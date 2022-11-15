@@ -1,5 +1,6 @@
 import random
 
+
 class Partida:
 
     def __init__(self):
@@ -9,18 +10,31 @@ class Partida:
         # resultado = sum(list(map(sum, list(self.tabla_puntos)))) 
         resultado = 0
         ha_habido_strike = False
+        ha_habido_spare = False
         for elemento in self.tabla_puntos:
             posicion = 0
             if self.check_strike(elemento):
                 resultado += 10
                 ha_habido_strike = True
                 posicion += 1 
+            
+            elif self.check_spare(elemento):
+                resultado += 10 
+                ha_habido_spare = True
+                posicion += 1
+            
             else: 
                 if ha_habido_strike:
                     resultado += 2*(sum(elemento))
                     ha_habido_strike = False
+
+                elif ha_habido_spare:
+                    resultado = resultado + sum(elemento) + elemento[0]
+                    ha_habido_spare = False
+
                 else:
                     resultado += sum(elemento)
+
                 posicion += 1
 
         return resultado
