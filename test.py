@@ -28,7 +28,7 @@ class TestBolos(unittest.TestCase):
 
     def test_sumar_puntuacion3(self):
         prueba = Partida()
-        prueba.tabla_puntos = [[1,1],[1,0],[1,0],[10,0],[1,5],[1,0],[1,0],[1,0],[1,0],[1,0]]
+        prueba.tabla_puntos = [[1,1],[1,0],[1,0],[10],[1,5],[1,0],[1,0],[1,0],[1,0],[1,0]]
         esperado = 31  
         resultado = prueba.sumar_puntuaciones()
         self.assertEqual(esperado, resultado)
@@ -60,7 +60,7 @@ class TestBolos(unittest.TestCase):
 
     def test_check_strike(self):
         prueba = Partida()
-        escenario = [[10,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
+        escenario = [[10],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
         prueba.tabla_puntos = escenario
         turno = prueba.tabla_puntos[0]
         self.assertTrue(prueba.check_strike(turno))
@@ -74,7 +74,7 @@ class TestBolos(unittest.TestCase):
 
     def test_check_spare2(self):
         prueba = Partida()
-        escenario = [[10,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
+        escenario = [[10],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
         prueba.tabla_puntos = escenario
         turno = prueba.tabla_puntos[0]
         self.assertFalse(prueba.check_spare(turno))
